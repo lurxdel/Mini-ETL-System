@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Results | Mini ETL System{% endblock %}
+
+{% block content %}
+<div class="glass-panel">
+    <div class="status-badge">
+        <svg style="width:16px;height:16px;display:inline;vertical-align:text-bottom;margin-right:4px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        Pipeline Completed Successfully
+    </div>
+    
+    <h1>ETL Results</h1>
+    <h2>Here are the fully processed clean records</h2>
+    
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for report in reports %}
+                <tr>
+                    <td style="font-family:monospace;color:var(--text-muted);">{{ report.student_id }}</td>
+                    <td style="font-weight:500;">{{ report.name }}</td>
+                    <td><span style="background:rgba(255,255,255,0.1);padding:0.25rem 0.75rem;border-radius:6px;font-size:0.85rem;">{{ report.course }}</span></td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3" style="text-align:center;color:var(--text-muted);padding:3rem;">
+                        No records found in the database.
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    <div style="text-align: left; margin-top: 1rem;">
+        <a href="{% url 'etl' %}" class="btn">
+            <svg style="width:20px;height:20px;margin-right:0.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Upload Another Dataset
+        </a>
+    </div>
+</div>
+{% endblock %}

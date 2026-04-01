@@ -1,0 +1,9 @@
+from django.db import models
+
+class StudentReport(models.Model):
+    student_id = models.CharField(max_length=20, unique=True)
+    name = models.CharField(max_length=150)
+    course = models.CharField(max_length=150)
+
+    def __str__(self):
+        return f"{self.student_id} - {self.name}"
