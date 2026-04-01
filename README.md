@@ -45,7 +45,11 @@ The application should now be running. Open your browser and go to `http://127.0
 To interact with the ETL system, append any of the following to your localhost URL (or use the UI navigation):
 
 - **Upload Dashboard (Extact & Transform):** `/etl/` - Upload your `students.csv` file here.
+<img width="1920" height="1001" alt="Image" src="https://github.com/user-attachments/assets/d90fed5f-bb20-4045-958e-9bd7cd354e6c" />
+<img width="1920" height="1001" alt="Image" src="https://github.com/user-attachments/assets/a4fb98ac-a24a-4f4f-9c9f-76ccce00476a" />
+
 - **Results View (Reporting):** `/etl/success/` - View the cleaned records loaded into the database.
+<img width="1920" height="1048" alt="Image" src="https://github.com/user-attachments/assets/adb69e73-5b7c-474a-9e19-91e9c5296709" />
 
 ### Acknowledgment  
 We are grateful to our instructors for their guidance and support throughout the development of this project. 
