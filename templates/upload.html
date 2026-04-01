@@ -4,7 +4,12 @@
 
 {% block content %}
 <div class="glass-panel">
-    <h1>Mini ETL System</h1>
+    <h1 style="display: flex; align-items: center; gap: 0.75rem;">
+        <svg style="width: 2.5rem; height: 2.5rem; color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+        </svg>
+        Mini ETL System
+    </h1>
     <h2>Upload your raw data to begin processing</h2>
     
     <form method="POST" enctype="multipart/form-data">
