@@ -21,21 +21,21 @@
         <table>
             <thead>
                 <tr>
-                    <th>Student ID</th>
-                    <th>Name</th>
-                    <th>Course</th>
+                    {% for header in headers %}
+                        <th>{{ header|upper }}</th>
+                    {% endfor %}
                 </tr>
             </thead>
             <tbody>
-                {% for report in reports %}
+                {% for row in rows %}
                 <tr>
-                    <td style="font-family:monospace;color:var(--text-muted);">{{ report.student_id }}</td>
-                    <td style="font-weight:500;">{{ report.name }}</td>
-                    <td><span style="background:rgba(255,255,255,0.1);padding:0.25rem 0.75rem;border-radius:6px;font-size:0.85rem;">{{ report.course }}</span></td>
+                    {% for cell in row %}
+                        <td>{{ cell }}</td>
+                    {% endfor %}
                 </tr>
                 {% empty %}
                 <tr>
-                    <td colspan="3" style="text-align:center;color:var(--text-muted);padding:3rem;">
+                    <td colspan="{{ headers|length|default:1 }}" class="empty-msg" style="text-align:center;color:var(--text-muted);padding:3rem;">
                         No records found in the database.
                     </td>
                 </tr>

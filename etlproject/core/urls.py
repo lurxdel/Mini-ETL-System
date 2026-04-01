@@ -21,5 +21,5 @@ from django.views.generic import RedirectView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='/etl/', permanent=False)),
-    path('', include('etlapp.urls')),
+    path('', include('etlproject.etlapp.urls')),
 ]

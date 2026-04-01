@@ -1,12 +1,12 @@
 # Mini ETL System
 
-This project is a web-based Extract, Transform, Load (ETL) pipeline built using the Django framework. It simulates a real-world data engineering process by taking raw CSV data, cleaning it, and loading it into a reporting database.
+This project is a **Dynamic Web-based ETL (Extract, Transform, Load) Pipeline** built using the Django framework. It is designed to handle **ANY** CSV data file, automatically processing the headers and transforming the data for display in a modern dashboard.
 
 ### Features
-- **Data Extraction:** Seamlessly handles user-uploaded raw `.csv` data files.
-- **Data Transformation:** Automatically cleans and maps missing or incomplete fields (e.g., assigning "Unknown Name" or "Unknown Course" to empty rows).
-- **Database Loading:** Safely inserts the transformed data into a SQLite database using the `StudentReport` model.
-- **Modern UI Dashboard:** Provides a beautifully styled, glassmorphism-themed frontend for users to upload files and view the fully processed records.
+- **Data Extraction:** Seamlessly handles user-uploaded raw `.csv` data files of any structure.
+- **Data Transformation:** Automatically cleans fields, handles missing values dynamically, and filters out index columns.
+- **Database Loading:** Safely inserts the transformed data into a SQLite database using a flexible JSON-based `ETLRecord` model.
+- **Dynamic UI Dashboard:** Provides a beautifully styled, glassmorphism-themed frontend that automatically adapts its table columns to match your uploaded CSV.
 
 ## Guide To Run
 To run the system locally, do the following.
@@ -44,7 +44,7 @@ The application should now be running. Open your browser and go to `http://127.0
 ### 3. Available Pages
 To interact with the ETL system, append any of the following to your localhost URL (or use the UI navigation):
 
-- **Upload Dashboard (Extact & Transform):** `/etl/` - Upload your `students.csv` file here.
+- **Upload Dashboard (Extract & Transform):** `/etl/` - Upload any CSV file here for automatic processing.
 <img width="1920" height="1001" alt="Image" src="https://github.com/user-attachments/assets/d90fed5f-bb20-4045-958e-9bd7cd354e6c" />
 <img width="1920" height="1001" alt="Image" src="https://github.com/user-attachments/assets/a4fb98ac-a24a-4f4f-9c9f-76ccce00476a" />
 

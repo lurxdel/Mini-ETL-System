@@ -1,43 +1,31 @@
+# Django / Python
 __pycache__/
 *.py[cod]
 *$py.class
-
 *.so
-
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
+env/
+venv/
+ENV/
 *.egg-info/
 .installed.cfg
 *.egg
 
-pip-log.txt
-pip-delete-this-directory.txt
-
+# Database
 db.sqlite3
 db.sqlite3-journal
 
-students.csv
-test_students.csv
+# Project ETL Data
+*.csv
+!test_students.csv  # Keep test file if you want others to see it
 test_out.txt
 
-venv/
-env/
-ENV/
-env.bak/
-venv.bak/
-
+# Editors
 .idea/
 .vscode/
 *.swp
+.DS_Store
+
+# Static
+static/
+media/
